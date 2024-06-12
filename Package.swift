@@ -7,6 +7,7 @@ let package = Package(
   platforms: [
     .iOS(.v14),
     .tvOS(.v14),
+    .macOS(.v12),
   ],
   products: [
     .library(
@@ -22,11 +23,13 @@ let package = Package(
       dependencies: [
         .target(name: "MobileVLCKit", condition: .when(platforms: [.iOS])),
         .target(name: "TVVLCKit", condition: .when(platforms: [.tvOS])),
+        .target(name: "VLCKit", condition: .when(platforms: [.macOS])),
       ],
       path: "Sources",
       linkerSettings: [
         .linkedFramework("MobileVLCKit", .when(platforms: [.iOS])),
         .linkedFramework("TVVLCKit", .when(platforms: [.tvOS])),
+        .linkedFramework("VLCKit", .when(platforms: [.macOS])),
       ]
     ),
     .binaryTarget(
@@ -38,6 +41,11 @@ let package = Package(
       name: "TVVLCKit",
       url: "https://github.com/omaralbeik/VLC/releases/download/3.6.0/TVVLCKit.zip",
       checksum: "de4d6918a0b85ba22a4154ae4ed28e0d1be6b84ec3f7593b6914dfe081e86add"
+    ),
+    .binaryTarget(
+      name: "VLCKit",
+      url: "https://github.com/omaralbeik/VLC/releases/download/3.6.0/VLCKit.zip",
+      checksum: "dcbf06e611e88487afe2d08c0c36cddb5f0b36196bf4ebb2a3a34abf3e8f6b9a"
     ),
   ]
 )
