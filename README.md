@@ -20,19 +20,19 @@ To manually add VLC as a dependency in your `Package.swift` file, include the fo
 import PackageDescription
 
 let package = Package(
- name: "YourProjectName",
- platforms: [/* */],
- dependencies: [
-     .package(url: "https://github.com/omaralbeik/VLC", exact: "3.6.0")
- ],
- targets: [
-     .target(
-         name: "YourTargetName",
-         dependencies: [
-             "VLC"
-         ]
-     ),
- ]
+  name: "YourProjectName",
+  platforms: [/* */],
+  dependencies: [
+    .package(url: "https://github.com/omaralbeik/VLC", exact: "3.6.0")
+  ],
+  targets: [
+    .target(
+      name: "YourTargetName",
+      dependencies: [
+        "VLC"
+      ]
+    ),
+  ]
 )
 ```
 
