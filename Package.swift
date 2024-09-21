@@ -7,6 +7,7 @@ let package = Package(
   platforms: [
     .iOS(.v14),
     .tvOS(.v14),
+    .macOS(.v12),
   ],
   products: [
     .library(
@@ -20,7 +21,7 @@ let package = Package(
     .target(
       name: "VLC",
       dependencies: [
-        .target(name: "VLCKit"),
+        .target(name: "VLCKit", condition: .when(platforms: [.iOS, .tvOS, .macOS])),
       ],
       path: "Sources"
     ),
