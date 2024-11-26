@@ -5,8 +5,8 @@ import PackageDescription
 let package = Package(
   name: "VLC",
   platforms: [
-    .iOS(.v14),
-    .tvOS(.v14),
+    .iOS(.v17),
+    .tvOS(.v17),
   ],
   products: [
     .library(
