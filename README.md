@@ -23,7 +23,7 @@ let package = Package(
   name: "YourProjectName",
   platforms: [/* */],
   dependencies: [
-    .package(url: "https://github.com/omaralbeik/VLC", exact: "3.6.0")
+    .package(url: "https://github.com/omaralbeik/VLC")
   ],
   targets: [
     .target(
