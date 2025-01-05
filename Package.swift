@@ -7,6 +7,8 @@ let package = Package(
   platforms: [
     .iOS(.v17),
     .tvOS(.v17),
+    .macOS(.v14),
+    .visionOS(.v1),
   ],
   products: [
     .library(
@@ -26,8 +28,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "VLCKit",
-      url: "https://github.com/omaralbeik/VLC/releases/download/3.6.3/VLCKit.zip",
-      checksum: "fae5c81f564ee89a682b3af2d063a2b3e20a0991536a2e2c3197fd8b5ddf6f88"
+      url: "https://github.com/omaralbeik/VLC/releases/download/4.0.0/VLCKit.zip",
+      checksum: "91d725c1d6444dc16e0cb195fb0623c598bf8cba7a9fdc4fa582b1c670b94159"
     ),
   ]
 )
